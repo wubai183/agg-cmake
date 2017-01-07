@@ -1,2 +1,22 @@
+
 # agg-cmake
-use cmake to build agg-2.5 from source
+---------------------------------
+Use cmake to build agg-2.5 from source.
+
+通过cmake方式可生成win32下的静态库，以及自带的大部分样例程序。
+cmake编译时，可选添加win32的truetype字体支持库，以及GPC通用裁剪库功能。
+
+## 环境
+CMake：>= 2.8
+C++编译器：Microsoft（R）C/C++编译器10.0以上（VS2010以上）
+
+## 编译
+1. 通过cmake生成编译的VS工程
+2. 打开生成的VS工程，编译解决方案即可
+
+## 已知问题
+* 目前仅测试过VC2010、VS2015的编译环境，其他环境下尚未进行测试
+* 目前仅支持win32环境，不支持其他平台，其他平台的相关代码已暂时移出工程
+* 目前仅支持生成静态库，并且官方也建议在win32工程中直接集成AGG源码
+* 目前没有集成AGG的freetype字体支持库
+
